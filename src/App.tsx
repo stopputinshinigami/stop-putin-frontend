@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ky from "ky";
+import React, { useEffect, useState } from "react";
+
+const callAndRecurse = async (url: string, headers: Record<string, string>) => {
+  try {
+    await ky.get(url, {
+      headers,
+    });
+  } catch {
+    console.log("woohoo");
+  } finally {
+    await callAndRecurse(url, headers);
+  }
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [sourcesUnderAttack, setSourcesUnderAttack] = useState<
+    {
+      url: string;
+      headers: Record<string, string>;
+    }[]
+  >([]);
+
+  useEffect(() => {
+    //fetch or hardcode sources
+  }, []);
+
+  useEffect(() => {
+    if (!sourcesUnderAttack) {
+      return;
+    }
+
+    (async () => {
+      for await (const source of sourcesUnderAttack) {
+        callAndRecurse(source.url, source.headers);
+      }
+    })();
+  }, [sourcesUnderAttack]);
+
+  return <div></div>;
 }
 
 export default App;
