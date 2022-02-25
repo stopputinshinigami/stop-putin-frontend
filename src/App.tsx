@@ -26,8 +26,10 @@ function App() {
     //fetch or hardcode sources
   }, []);
 
+  console.log("ehre");
+
   useEffect(() => {
-    if (!sourcesUnderAttack) {
+    if (!sourcesUnderAttack.length) {
       return;
     }
 
