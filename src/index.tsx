@@ -4,9 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { i18n } from "@lingui/core";
+import { I18nProvider } from "@lingui/react";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <I18nProvider i18n={i18n}>
+      <App />
+    </I18nProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

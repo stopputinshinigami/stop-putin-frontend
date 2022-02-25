@@ -1,15 +1,16 @@
 import ky from "ky";
 import React, { useEffect, useState } from "react";
+import { InformationScreen } from "./components";
 
 const callAndRecurse = async (url: string, headers: Record<string, string>) => {
   try {
-    await ky.get(url, {
+    ky.get(url, {
       headers,
     });
   } catch {
     console.log("woohoo");
   } finally {
-    await callAndRecurse(url, headers);
+    callAndRecurse(url, headers);
   }
 };
 
@@ -37,7 +38,7 @@ function App() {
     })();
   }, [sourcesUnderAttack]);
 
-  return <div></div>;
+  return <InformationScreen />;
 }
 
 export default App;
