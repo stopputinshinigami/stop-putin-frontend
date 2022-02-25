@@ -1476,6 +1476,17 @@
     make-plural "^6.2.2"
     messageformat-parser "^4.1.3"
 
+"@lingui/loader@^3.13.2":
+  version "3.13.2"
+  resolved "https://registry.yarnpkg.com/@lingui/loader/-/loader-3.13.2.tgz#699e04256350adb47f6884dd40d6d1a3d2435f34"
+  integrity sha512-CFwoNLj3RJ+RADehkVVP0Pe5TBvhl61uKd45negsMP27EA6Xoc6zG1GwqqtE2GEg2soDe04RwmX6Uq6lCNxstA==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@lingui/cli" "^3.13.2"
+    "@lingui/conf" "^3.13.2"
+    loader-utils "^2.0.0"
+    ramda "^0.27.1"
+
 "@lingui/macro@^3.13.2":
   version "3.13.2"
   resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-3.13.2.tgz#d62c02cf3fb7391962163a22b33c66d79df2873b"
@@ -3093,6 +3104,21 @@ cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
   integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
+
+cldr-core@^40.0.0:
+  version "40.0.0"
+  resolved "https://registry.yarnpkg.com/cldr-core/-/cldr-core-40.0.0.tgz#ec8c187fbd483796a30b25aedf37d8a504e937c5"
+  integrity sha512-0nmiOR9I2ImfspRTvFhzF7uXYtVCnHMYULrIncArrsnICUxNnZVEJ6pHPRUtB3J8i4VkwQQMRcs9yl4+wxVP4g==
+
+cldr-dates-full@^40.0.0:
+  version "40.0.0"
+  resolved "https://registry.yarnpkg.com/cldr-dates-full/-/cldr-dates-full-40.0.0.tgz#33b8f77e64a70a733e390a9700e379111a0531d2"
+  integrity sha512-AqsXdzaga/kN2+Gbtj72ztWjFG+JdnZd2Yu5SNZb7ZwWR6zESGXOdymPaR3phKosIpsNrDsye1RQC33pv+fOAw==
+
+cldr-localenames-full@^40.0.0:
+  version "40.0.0"
+  resolved "https://registry.yarnpkg.com/cldr-localenames-full/-/cldr-localenames-full-40.0.0.tgz#213ea189f5b8abee62852c89ab29e8b029af9ed2"
+  integrity sha512-3P7MI2IYKRQMRztl5UQXiUzqTjg5otwvR9vCfLNrmWSusyVkpgv8xtL5EHxpvPm9Qub61fe6LNpNXINOXEO2Ow==
 
 clean-css@^5.2.2:
   version "5.2.4"

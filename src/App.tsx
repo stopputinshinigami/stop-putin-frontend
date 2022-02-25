@@ -1,6 +1,9 @@
 import ky from "ky";
 import React, { useEffect, useState } from "react";
 import { InformationScreen } from "./components";
+import { useLingui } from "./hooks/useLingui";
+import { i18n } from "@lingui/core";
+import { I18nProvider } from "@lingui/react";
 
 const callAndRecurse = async (url: string, headers: Record<string, string>) => {
   try {
@@ -15,6 +18,8 @@ const callAndRecurse = async (url: string, headers: Record<string, string>) => {
 };
 
 function App() {
+  const localesLoading = useLingui();
+
   const [sourcesUnderAttack, setSourcesUnderAttack] = useState<
     {
       url: string;
@@ -25,8 +30,6 @@ function App() {
   useEffect(() => {
     //fetch or hardcode sources
   }, []);
-
-  console.log("ehre");
 
   useEffect(() => {
     if (!sourcesUnderAttack.length) {
@@ -40,7 +43,15 @@ function App() {
     })();
   }, [sourcesUnderAttack]);
 
-  return <InformationScreen />;
+  if (localesLoading) {
+    return <></>;
+  }
+
+  return (
+    <I18nProvider i18n={i18n}>
+      <InformationScreen />
+    </I18nProvider>
+  );
 }
 
 export default App;

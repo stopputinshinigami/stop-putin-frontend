@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@lingui/loader": "^3.13.2",
     "@lingui/react": "^3.13.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
@@ -12,10 +13,14 @@
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.23",
+    "cldr-core": "^40.0.0",
+    "cldr-dates-full": "^40.0.0",
+    "cldr-localenames-full": "^40.0.0",
     "ky": "^0.29.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "semver": "^7.3.5",
     "styled-components": "^5.3.3",
     "typescript": "^4.5.5",
     "web-vitals": "^2.1.4"
