@@ -13,6 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/InformationScreen.tsx:7
+#: src/components/InformationScreen.tsx:24
 msgid "Hello there"
 msgstr "Hello there"
